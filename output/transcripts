@@ -1,0 +1,25 @@
+def generate_transcript(conn, student_id):
+    query = """
+    SELECT s.name, c.course_name, g.grade, g.marks
+    FROM grades g
+    JOIN students s ON g.student_id = s.student_id
+    JOIN courses c ON g.course_id = c.course_id
+    WHERE s.student_id = ?
+    """
+
+    cursor = conn.execute(query, (student_id,))
+    records = cursor.fetchall()
+
+    if not records:
+        print("No records found for this student.")
+        return
+
+    # Print student name
+    print(f"\nTranscript for {records[0][0]}")
+    print("-" * 40)
+    print("{:<15} {:<10} {:<10}".format("Course", "Grade", "Marks"))
+
+    # Print all courses
+    for row in records:
+        course, grade, marks = row[1], row[2], row[3]
+        print("{:<15} {:<10} {:<10}".format(course, grade, marks))

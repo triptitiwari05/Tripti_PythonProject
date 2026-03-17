@@ -1,6 +1,5 @@
 from collections import Counter
 
-
 class Reporter:
     def __init__(self, db, grade_service):
         self.db = db

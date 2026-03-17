@@ -1,7 +1,6 @@
 import re
 from datetime import date, datetime
 
-
 class Student:
     EMAIL_PATTERN = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
 

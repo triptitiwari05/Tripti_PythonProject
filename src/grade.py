@@ -1,4 +1,3 @@
-
 class Grade:
     GRADE_POINTS = {
         "A": 4,

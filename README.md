@@ -130,6 +130,4 @@ Student Name: tripti tiwari
 ### Author Information
 
 * Name: Tripti Arun Tiwari
-* Batch: ITC Infotech - Python Developer
-* Submission Date: 17 March 2026
 * Email: triptitiwari9422@gmail.com
